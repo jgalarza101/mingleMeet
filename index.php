@@ -12,7 +12,7 @@
 
 	.container{
 		border-radius: 15px;
-		
+
 	}
 
 	.body > header{
@@ -35,7 +35,7 @@
 			<h1><a href="index.php"> MingleMeet</a> </h1>
 		</header>
 		<div class="container" style="background-color:rgba(20, 52, 57, 0.55)">
-            <h2> Who is hooking up in the world? Find out what people are looking for relationship right now! No credit card needed! Just nice and easy to use, just like you!</h2>
+            <h2> Who is hooking up in the world? Find out what people are looking for relationship right now! No credit card needed! Nice and easy to use!</h2>
 			<section class="row buttons">
 				<div class="col-sm-6">
 					<a href="login.php" class="btn btn-success btn-lg"> Login Now </a>
