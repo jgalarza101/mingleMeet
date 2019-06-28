@@ -18,7 +18,6 @@
 	.body > header{
 		background-color:rgba(1, 60, 74, 0.5);
 		margin-bottom: 1em;
-		font-family: 'Montserrat', sans-serif;
 	}
 
 	h2, h4, p{
@@ -32,7 +31,7 @@
 </head>
 <body class="body">
 		<header>
-			<h1><a href="index.php"> MingleMeet</a> </h1>
+			<h1><a href="index.php" style="font-weight: normal;"> MingleMeet</a> </h1>
 		</header>
 		<div class="container" style="background-color:rgba(20, 52, 57, 0.55)">
             <h2> Who is hooking up in the world? Find out what people are looking for relationship right now! No credit card needed! Nice and easy to use!</h2>

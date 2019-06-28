@@ -6,7 +6,7 @@ $registerDone = "";
 
 if(isset($_POST['btn-register'])){
 	if(trim($_POST['username']) == "") //trim function removes spaces from left and right
-		$usernameErr ="enter username";
+		$usernameErr ="Please enter username";
 	else{
 		$username = strtolower(trim($_POST['username'])); //strtolower function converts string to lowercase;
 
@@ -17,42 +17,42 @@ if(isset($_POST['btn-register'])){
 	}
 
 	if(trim($_POST['firstName'])=="")
-		$fnameErr = "enter first name";
+		$fnameErr = "Please enter first name";
 	else
 		$firstName = ucfirst(strtolower(trim($_POST['firstName']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['lastName'])=="")
-		$lnameErr = "enter last name";
+		$lnameErr = "Please enter last name";
 	else
 		$lastName = ucfirst(strtolower(trim($_POST['lastName']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['age'])=="")
-		$ageErr = "enter your age";
+		$ageErr = "Please enter your age";
 	else
 		$age = ucfirst(strtolower(trim($_POST['age']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['cityName'])=="")
-		$cityNameErr = "enter city name of where you live";
+		$cityNameErr = "Please enter city name of where you live";
 	else
 		$cityName = ucfirst(strtolower(trim($_POST['cityName']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['stateName'])=="")
-		$stateNameErr = "enter state name of where you live";
+		$stateNameErr = "Please enter state name of where you live";
 	else
 		$stateName = ucfirst(strtolower(trim($_POST['stateName']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['aboutMe'])=="")
-		$aboutErr = "enter a little description about yourself";
+		$aboutErr = "Please enter a little description about yourself";
 	else
 		$aboutMe = ucfirst(strtolower(trim($_POST['aboutMe']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['gender'])=="")
-		$genderErr = "enter your gender";
+		$genderErr = "Please enter your gender";
 	else
 		$gender = ucfirst(strtolower(trim($_POST['gender']))); //ucfirst is going to convert first letter of the string to uppercase
 
 	if(trim($_POST['email']) == "") //trim function removes spaces from left and right
-		$emailErr ="enter email address";
+		$emailErr ="Please enter email address";
 	else{
 		$email = strtolower(trim($_POST['email'])); //strtolower function converts string to lowercase;
 
@@ -63,7 +63,7 @@ if(isset($_POST['btn-register'])){
 	}
 
 	if(trim($_POST['password'])=="")
-		$passErr = "enter password";
+		$passErr = "Please enter password";
 	else {
 		$password = trim($_POST['password']);
 		$passwordEncrypt = md5($password);//md5 is used to encrypt the password
@@ -74,7 +74,7 @@ if(isset($_POST['btn-register'])){
 		$imgContent = addslashes(file_get_contents($fileLoc)); // file_get_contents gets the contents of the image to be uploaded to the database
 	}
 	else
-		$imgErr = "upload an image";
+		$imgErr = "Please upload an image";
 
 	if($usernameErr=="" && $fnameErr=="" && $lnameErr=="" && $ageErr=="" && $emailErr=="" && $passErr=="" && $imgErr=="" && $cityNameErr=="" && $stateNameErr=="" && $aboutErr=="" && $genderErr==""){
 
@@ -102,6 +102,7 @@ include "includes/header.php";
 		background-attachment: fixed;
 		background-position: center;
 		color: white;
+		margin: 0;
 	}
 
 	.container{
@@ -115,7 +116,12 @@ include "includes/header.php";
 	.body > header{
 		background-color:rgba(1, 60, 74, 0.5);
 		margin-bottom: 1em;
-		font-family: 'Montserrat', sans-serif;
+
+	}
+
+	span.error{
+				color: rgba(241, 169, 160, 1);
+				font-style:italic;
 	}
 </style>
 </head>
@@ -124,7 +130,7 @@ include "includes/header.php";
 			<h1> <a href="index.php"> MingleMeet </a></h1>
 		</header>
 
-		<div class="container" style="background-color:rgba(20, 52, 57, 0.55)">
+		<div class="container" style="background-color:rgba(20, 52, 57, 0.55); margin-bottom: 20px;">
 			<div class="row">
 				<div class="col-sm-12">
 					<h2> Register Now! </h2>
@@ -167,7 +173,7 @@ include "includes/header.php";
 
 						<input type="submit" name="btn-register" class="btn btn-success form-control submit-button" />
 
-						<br><br>Already have an account? <a href="login.php" style="color: white; text-decoration: underline"> Login Here </a>
+						<br><br>Already have an account? <a href="login.php" style="color: #c5eff7; text-decoration: underline"> Login Here </a>
 						<br><br>
 
 					</form>

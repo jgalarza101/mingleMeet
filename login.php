@@ -12,13 +12,13 @@ $loginErr = "";
 
 if(isset($_POST['btn-login'])){
 	if(trim($_POST['username'])=="")
-		$usernameErr = "enter username";
+		$usernameErr = "Please enter username";
 	else
 		$username = strtolower(trim($_POST['username']));
 
 
 	if(trim($_POST['password'])=="")
-		$passErr = "enter password";
+		$passErr = "Please enter password";
 	else {
 		$password = trim($_POST['password']);
 		$passwordEncrypt = md5($password);
@@ -58,15 +58,21 @@ if(isset($_POST['btn-login'])){
 	.form-control{
 		border-radius: 15px;
 	}
+
 	.body > header{
 		background-color:rgba(1, 60, 74, 0.5);
 		margin-bottom: 1em;
+	}
+
+	span.error{
+				color: rgba(241, 169, 160, 1);
+				font-style:italic;
 	}
 	</style>
 </head>
 <body class="body">
 		<header>
-			<h1> <a href="index.php"> MingleMeet </a></h1>
+			<h1> <a href="index.php" style="font-weight: normal;"> MingleMeet </a></h1>
 		</header>
 
 		<div class="container" style="background-color:rgba(20, 52, 57, 0.55)">
@@ -84,7 +90,7 @@ if(isset($_POST['btn-login'])){
 
 						<input type="submit" name="btn-login" class="btn btn-success form-control submit-button" />
 
-						<br><br> Don't have an account? <a href="register.php" style="color: white; text-decoration: underline"> Register Here </a>
+						<br><br> Don't have an account? <a href="register.php" style="color: #c5eff7; text-decoration: underline"> Register Here </a>
 						<br><br>
 
 					</form>
